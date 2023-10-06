@@ -1,0 +1,4 @@
+# here DB_DSN for db connect in format `DB_DSN=YOURDSN`
+/cmd/main/credentials.env
+
+*.exe
