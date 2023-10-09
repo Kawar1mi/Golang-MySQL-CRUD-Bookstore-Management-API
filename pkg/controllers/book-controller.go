@@ -110,11 +110,9 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	b := models.DeleteBook(bookId)
-	res, _ := json.Marshal(b)
+	models.DeleteBook(bookId)
 
 	w.Header().Set("Content-type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(res)
 
 }

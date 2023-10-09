@@ -4,8 +4,6 @@ import (
 	"os"
 	"path/filepath"
 
-	"fmt"
-
 	"github.com/joho/godotenv"
 
 	"gorm.io/driver/sqlserver"
@@ -26,7 +24,7 @@ func Connect() {
 
 	d, err := gorm.Open(sqlserver.Open(dsn), &gorm.Config{})
 	if err != nil {
-		fmt.Println(err.Error())
+		panic(err.Error())
 	}
 
 	db = d
